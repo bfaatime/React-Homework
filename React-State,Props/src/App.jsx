@@ -2,11 +2,11 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [todos, setTodos] = useState([]); // Bütün task-lar
-  const [input, setInput] = useState(""); // Input dəyəri
-  const [filter, setFilter] = useState("all"); // Filtr: all, completed, pending
+  const [todos, setTodos] = useState([]); 
+  const [input, setInput] = useState(""); 
+  const [filter, setFilter] = useState("all"); 
 
-  // Yeni task əlavə etmək
+
   const addTodo = () => {
     if (input.trim()) {
       setTodos([...todos, { text: input, completed: false }]);
@@ -14,12 +14,12 @@ function App() {
     }
   };
 
-  // Task silmək
+
   const deleteTodo = (index) => {
     setTodos(todos.filter((_, i) => i !== index));
   };
 
-  // Task tamamlandı olaraq işarələmək
+
   const toggleComplete = (index) => {
     setTodos(
       todos.map((todo, i) =>
@@ -28,7 +28,6 @@ function App() {
     );
   };
 
-  // Task-ları filtrləmək
   const filteredTodos = todos.filter((todo) => {
     if (filter === "completed") return todo.completed;
     if (filter === "pending") return !todo.completed;
