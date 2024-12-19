@@ -30,17 +30,19 @@ body {
   margin-left: 5px;
   background-color: #007bff;
   color: white;
-  border: none;
   border-radius: 5px;
+  border: none;
   cursor: pointer;
+
 }
 
 .buttons button {
   margin: 5px;
   padding: 8px 12px;
-  border: none;
   border-radius: 5px;
+  border: none;
   cursor: pointer;
+
 }
 
 .buttons button:nth-child(1) {
@@ -68,19 +70,111 @@ ul {
   padding: 0;
 }
 
-li {
+.todo-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   border-bottom: 1px solid #ddd;
+  background-color: #fafafa;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-li.completed span {
+.todo-item.completed .checkbox-label {
   text-decoration: line-through;
   color: gray;
 }
 
-button {
+.custom-checkbox input {
+  margin-right: 10px;
+}
+
+.todo-actions button {
+  padding: 5px 10px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.pending-count {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.modal-actions button {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.edit-input {
+  width: 70%;
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #ffc107;
+  color: white;
 }
